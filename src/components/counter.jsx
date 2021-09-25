@@ -12,21 +12,16 @@ class Counter extends React.Component {
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
 				<button
 					onClick={() => {
-						this.handleIncrement({ product });
+						this.handleIncrement();
 					}}
 					className="btn btn-secondary btn-sm">
 					Increment
 				</button>
-
-				<div>
-					{this.state.tags.length === 0 && "Please create a new tag"}
-					{this.renderTags()}
-				</div>
 			</div>
 		);
 	}
 
-	handleIncrement = (product) => {
+	handleIncrement = () => {
 		this.setState({ count: this.state.count + 1 });
 	};
 
@@ -39,16 +34,6 @@ class Counter extends React.Component {
 		let classes = "badge m-2 badge-";
 		classes += this.state.count === 0 ? "warning" : "primary";
 		return classes;
-	}
-
-	renderTags() {
-		return (
-			<ul>
-				{this.state.tags.map((tag) => (
-					<li key={tag}>{tag}</li>
-				))}
-			</ul>
-		);
 	}
 }
 
