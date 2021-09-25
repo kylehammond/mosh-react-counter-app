@@ -27,12 +27,11 @@ class Counter extends React.Component {
 
 	constructor() {
 		super();
-		this.handleIncrement = this.handleIncrement.bind(this);
 	}
 
-	handleIncrement() {
+	handleIncrement = () => {
 		console.log("Increment Clicked", this);
-	}
+	};
 
 	formatCount() {
 		const { count } = this.state;
