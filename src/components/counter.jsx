@@ -12,8 +12,7 @@ class Counter extends React.Component {
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
 				<button
 					onClick={this.handleIncrement}
-					className="btn btn-secondary btn-sm"
-				>
+					className="btn btn-secondary btn-sm">
 					Increment
 				</button>
 
