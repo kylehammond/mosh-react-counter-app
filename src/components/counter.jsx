@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Counter extends React.Component {
 	render() {
 		const { counter, onIncrement, onDelete } = this.props;
+
 		return (
 			<div>
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
